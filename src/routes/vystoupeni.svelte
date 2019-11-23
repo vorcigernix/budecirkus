@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Vystoupení/title>
+	<title>Vystoupení</title>
 </svelte:head>
 
 <h1>claim</h1>
