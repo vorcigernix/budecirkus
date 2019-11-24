@@ -79,17 +79,13 @@ nav > ul > li > a {
       <a class:selected={segment === 'kurzy'} href="kurzy" on:click={closeNav}>Kurzy</a>
     </li>
     <li>
-      <a class:selected={segment === 'vystoupeni'} href="vystoupeni" on:click={closeNav}>Vystoupení</a>
+      <a class:selected={segment === 'nabizime'} href="nabizime" on:click={closeNav}>Nabízíme</a>
     </li>
-    <li>
-      <a class:selected={segment === 'workshopy'} href="workshopy" on:click={closeNav}>Workshopy</a>
-    </li>
-	  <li>
+	<li>
       <a class:selected='{segment === "kontakty"}' href='kontakty' on:click={closeNav}>Kontakty</a>
     </li>
-    <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen
-		<li><a rel=prefetch class:selected='{segment === "blog"}' href='blog'>blog</a></li>
-		-->
+    <li>
+      <a rel=prefetch class:selected='{segment === "blog"}' href='blog' on:click={closeNav}>blog</a>
+    </li>
   </ul>
 </nav>
