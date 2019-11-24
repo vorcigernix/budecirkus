@@ -1,8 +1,6 @@
 <script context="module">
-    import {getAllCourses} from "../services/dataFetchers";
-
-    export async function preload({ params, query }) {
-        const courses = await getAllCourses()
+    export async function preload() {
+        const courses = await this.fetch(`kurzy.json`).then(r => r.json());
         const kidCourses = courses.filter(course => course.courseTypeName === 'pro děti')
         const grownupCourses = courses.filter(course => course.courseTypeName === 'pro dospělé')
         return {kidCourses, grownupCourses}
@@ -10,7 +8,7 @@
 </script>
 
 <script>
-    import Course from "../components/Course.svelte";
+    import Course from "../../components/Course.svelte";
     export let kidCourses, grownupCourses;
 </script>
 
