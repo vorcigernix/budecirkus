@@ -23,6 +23,7 @@ body {
 	font-size: 14px;
 	line-height: 1.5;
 	color: #333;
+	max-width: 100vw;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,7 +34,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 2em;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--orange);
+}
+
+h1 > strong {
+    font-weight: bold;
 }
 
 a {
@@ -61,4 +68,28 @@ code {
 
 .classLoader {
 	display: none;
+}
+
+section {
+	padding: 2rem 1rem;
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+
+.box p {
+    margin-bottom: 1rem;
+}
+
+.box a {
+    color: var(--orange);
 }

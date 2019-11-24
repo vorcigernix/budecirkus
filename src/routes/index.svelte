@@ -6,18 +6,8 @@
 <style>
 :global(body) {
     background-color: var(--lightgrey);
-    height: 200vh;
 }
 
-h1 {
-    font-weight: 500;
-    font-size: 2.5rem;
-    color: var(--orange);
-}
-
-h1 > strong {
-    font-weight: bold;
-}
 
 h2 {
     font-size: 1rem;
@@ -27,7 +17,6 @@ h2 {
 
 .landing {
     text-align: center;
-    padding: 2rem 1rem;
     position: relative;
 }
 
@@ -36,7 +25,8 @@ h2 {
     display: block;
     position: absolute;
     top: -4rem;
-    width: 100%;
+    left: 0;
+    right: 0;
     height: 16rem;
     background-image: url('/landing-top.png');
     background-position: center top;
@@ -51,7 +41,8 @@ h2 {
     display: block;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     height: 16rem;
     background-image: url('/landing-bot.png');
     background-position: center bottom;
@@ -61,24 +52,6 @@ h2 {
     opacity: 0.2;
 }
 
-.box {
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-    margin-bottom: 1rem;
-    background-color: var(--white);
-    border-radius: .5rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
-    text-align: left;
-}
-
-.box p {
-    margin-bottom: 1rem;
-}
-
-.box a {
-    color: var(--orange);
-}
 
 .storyP {
     padding: 1rem;
