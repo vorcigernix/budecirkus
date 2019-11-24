@@ -11,17 +11,17 @@
       <a class:selected={segment === undefined} href=".">budecirkus</a>
     </li>
     <li>
-      <a class:selected={segment === 'kurzy'} href="kurzy">kurzy</a>
+      <a class:selected={segment === 'kurzy'} href="kurzy">Kurzy</a>
     </li>
     <li>
-      <a class:selected={segment === 'vystoupeni'} href="vystoupeni">vystoupeni</a>
+      <a class:selected={segment === 'nabizime'} href="nabizime">Nabízíme</a>
+    </li>
+	<li>
+      <a class:selected='{segment === "kontakty"}' href='kontakty'>Kontakty</a>
     </li>
     <li>
-      <a class:selected={segment === 'workshopy'} href="workshopy">workshopy</a>
+      <a rel=prefetch class:selected='{segment === "blog"}' href='blog'>blog</a>
     </li>
-	<li><a class:selected='{segment === "kontakty"}' href='kontakty'>kontakty</a></li>
-
-		<li><a rel=prefetch class:selected='{segment === "blog"}' href='blog'>blog</a></li>
 
   </ul>
 </nav>
