@@ -36,6 +36,11 @@
     .signup {
         grid-area: signup;
     }
+    @media(min-width: 768px) {
+        ul.box {
+            margin: 1rem;
+        }
+    }
 </style>
 
 <li>

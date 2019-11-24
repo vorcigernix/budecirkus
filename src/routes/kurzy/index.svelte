@@ -15,10 +15,17 @@
 <style>
 ul {
     list-style: none;
-    margin: 0;
+    margin: 0 0 2rem 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+}
+
+@media(min-width: 768px) {
+	ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 </style>
 
