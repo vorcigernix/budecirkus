@@ -33,3 +33,11 @@
         <img src="photo1.jpg" alt="mladá slečna zavěšená v cirkusovém kruhu před publikem">
     </figure>
 </section>
+
+<section>
+    <h1 aria-label="Odkaz na kontakty">
+        <a href="kontakty">
+            Kontaktujte nás
+        </a>
+    </h1>
+</section>
