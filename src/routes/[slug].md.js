@@ -8,13 +8,13 @@ export const SLUG_SEPARATOR = '_';
 const makeSlug = makeSlugProcessor(SLUG_PRESERVE_UNICODE);
 
 export function get(req, res) {
-    const file = `content/${params.slug}.md`;
+    const file = `content/${req.params.slug}.md`;
     const match = /^(\d+-\d+-\d+)-(.+)\.md$/.exec(file);
     if (!match) throw new Error(`Invalid filename '${file}'`);
 
     const [, pubdate, slug] = match;
 
-    const markdown = fs.readFileSync(`content/blog/${file}`, 'utf-8');
+    const markdown = fs.readFileSync(`content/${file}`, 'utf-8');
 
     const { content, metadata } = extract_frontmatter(markdown);
 

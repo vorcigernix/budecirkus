@@ -1,6 +1,6 @@
 <script context="module">
-	export async function preload({ params }) {
-		const res = await this.fetch(`../${params.slug}.md`);
+	export async function preload() {
+		const res = await this.fetch(`../kontakty.md`);
 		return res.ok ? { post: await res.json() } : this.error(404, 'Not found');
 	}
 </script>
