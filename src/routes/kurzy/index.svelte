@@ -31,7 +31,12 @@ ul {
     <h1>Kurzy</h1>
 
     <h2>Pro děti</h2>
-    <p>za hodinku až hodinku a půl se děti společně zasmějí, zablbnou a samozřejmě se u toho naučí spoustu nových věcí - základy žonglování, akrobacie, párové akrobacie, vzdušné akrobacie, balanc, stavění lidských pyramid, práce ve skupině, připravování vystoupení, rozvíjení fantazie, koordinace a pochopení vlastního těla - tomu všemu se věnujeme a stihneme si k tomu zahrát spousty hříček a hlavně se zasmát</p>
+    <p>
+        Za hodinku se děti společně zasmějí, zablbnou a samozřejmě se u toho naučí spoustu nových věcí.
+        Základy žonglování, akrobacie, párové akrobacie, vzdušné akrobacie, balanc, stavění lidských pyramid, práce ve
+        skupině, připravování vystoupení, rozvíjení fantazie, koordinace a pochopení vlastního těla. Tomu všemu se věnujeme a
+        stihneme si k tomu zahrát spousty hříček a hlavně se zasmát.
+    </p>
     <ul aria-label="Sekce - děti">
         {#each kidCourses as course}
             <Course course={course}/>
@@ -40,7 +45,11 @@ ul {
 
 
     <h2>Pro dospělé</h2>
-    <p>vyšplhat, zamotat se, zavěsit se, řízeně a elegantně popadnout a rozmotat se... společně vytvořit pozice, které jste předtím nechápali, lidská pyramida...  k tomu zahřátí, posilování a protažení... lepší poznání vlastního těla a posunutí dosavadních možností... vše samozřejmě trochu jinak než jste zvyklí.. vždyť jsme Cirkus :)</p>
+    <p>
+        Vyšplhat, zamotat se, zavěsit se, řízeně a elegantně popadnout a rozmotat se, společně vytvořit pozice, které
+        jste předtím nechápali, lidská pyramida, lepší poznání vlastního těla a posunutí dosavadních možností. Vše
+        samozřejmě trochu jinak než jste zvyklí.
+    </p>
     <ul aria-label="Sekce - dospělí">
         {#each grownupCourses as course}
             <Course course={course}/>
