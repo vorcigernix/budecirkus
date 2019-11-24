@@ -3,10 +3,11 @@ import path from 'path';
 import { extract_frontmatter, link_renderer } from '@sveltejs/site-kit/utils/markdown.js';
 import marked from 'marked';
 import { makeSlugProcessor } from '../../utils/slug';
-import { highlight } from '../../utils/highlight';
-import { SLUG_PRESERVE_UNICODE } from '../../../config';
 
+export const SLUG_PRESERVE_UNICODE = false;
+export const SLUG_SEPARATOR = '_';
 const makeSlug = makeSlugProcessor(SLUG_PRESERVE_UNICODE);
+
 
 export default function get_posts() {
 	return fs
