@@ -36,16 +36,20 @@
     .signup {
         grid-area: signup;
     }
+  
     @media(min-width: 768px) {
         ul.box {
             margin: 1rem;
         }
+  }
+    .coloredText {
+        color: var(--red);
     }
 </style>
 
 <li>
     <ul class="box">
-        <li aria-label="Název kurzu" class="name">
+        <li aria-label="Název kurzu" class="name coloredText">
             {course.abbreviation}
         </li>
         <li aria-label="Popis" class="desc">
@@ -59,6 +63,8 @@
             <i class="fas fa-users"></i>
             {course.filled}/{course.maxFreePlacesForLessonSelection + course.filled}
         </li>
-        <li aria-label="Přihlásit se" class="signup"><a href="https://budecirkus.webooker.eu/Courses/Register/{course.courseID}">Přihlaste se</a></li>
+        <li aria-label="Přihlásit se" class="signup">
+            <a class='coloredText' href="https://budecirkus.webooker.eu/Courses/Register/{course.courseID}">Přihlaste se</a>
+        </li>
     </ul>
 </li>

@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   export let segment;
-  
+
   const handleNavCollapse = () => {
     document.querySelector("nav").classList.toggle("collapsed");
   }

@@ -103,6 +103,9 @@ figure {
     .box.center {
         margin: 1rem auto;
     }
+  }
+.link {
+    color: var(--red);
 }
 
 </style>
@@ -117,11 +120,11 @@ figure {
     <div class="boxes">
         <div class="box clickable" on:click={() => goTo('/kurzy')} aria-label="Kurzy">
             <p>Pořádáme kurzy pro děti od 3 do 15 let a workshopy pro malé i velké.</p>
-            <a href="kurzy">Přihlaste se do kurzu</a>
+            <a class='link' href="kurzy">Přihlaste se do kurzu</a>
         </div>
         <div class="box clickable" on:click={() => goTo('/nabizime')} aria-label="Nabídka">
             <p>Nabízíme netradiční vystoupení na plesech, firemních akcích i festivalech</p>
-            <a href="vystoupeni" aria-label="Odkaz na nabídku">Objednejte si nás</a>
+            <a class='link' href="vystoupeni" aria-label="Odkaz na nabídku">Objednejte si nás</a>
         </div>
     </div>
 </section>
