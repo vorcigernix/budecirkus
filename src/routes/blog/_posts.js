@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { extract_frontmatter, link_renderer } from '@sveltejs/site-kit/utils/markdown.js';
 import marked from 'marked';
-import { makeSlugProcessor } from '../../utils/slug';
+import { makeSlugProcessor } from '../../helpers/slug';
 
 export const SLUG_PRESERVE_UNICODE = false;
 export const SLUG_SEPARATOR = '_';
@@ -32,7 +32,7 @@ export default function get_posts() {
 
 			renderer.link = link_renderer;
 
-			renderer.code = highlight;
+			//renderer.code = highlight;
 
 			renderer.heading = (text, level, rawtext) => {
 				const fragment = makeSlug(rawtext);

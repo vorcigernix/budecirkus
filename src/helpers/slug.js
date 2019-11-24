@@ -1,8 +1,9 @@
 import slugify from '@sindresorhus/slugify';
-import {SLUG_SEPARATOR} from '../../config';
 
 /* url-safe processor */
 
+
+export const SLUG_SEPARATOR = '_';
 export const urlsafeSlugProcessor = string =>
 	slugify(string, {
 		customReplacements: [	// runs before any other transformations
