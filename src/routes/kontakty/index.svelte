@@ -1,12 +1,14 @@
 <script context="module">
   export async function preload() {
-    const res = await this.fetch(`../kontakty.md`);
-    return res.ok ? { text: await res.text } : this.error(404, "Not found");
+	const res = await this.fetch(`../kontakty.md`);
+	const rtext = await res.text();
+	console.log(rtext);
+    return res.ok ? { text: await rtext } : this.error(404, "Not found");
   }
 </script>
 
 <script>
-  export let text;
+	export let text;
 </script>
 
 <svelte:head>
