@@ -60,6 +60,18 @@ h2 {
 
 .photo {
     width: 100%;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+}
+
+figure {
+    width: 100%;
+    margin: 0;
 }
 
 .name {
@@ -68,6 +80,30 @@ h2 {
     text-align: center;
 }
 
+@media(min-width: 768px) {
+    .boxes {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .box.image {
+        width: auto;
+    }
+
+    .box {
+        margin: 1rem;
+    }
+
+    #land .box {
+        cursor: pointer;
+    }
+
+    .box.center {
+        margin: 1rem auto;
+    }
+  }
 .link {
     color: var(--red);
 }
@@ -78,23 +114,25 @@ h2 {
 	<title>Bude Cirkus</title>
 </svelte:head>
 
-<section class="landing" aria-label="Hlavní stránka, první část">
+<section class="landing" aria-label="Hlavní stránka, první část" id="land">
     <h1 aria-label="Heslo Bude Cirkus">Obohaťte se <strong>novým cirkusem</strong></h1>
     <h2 aria-label="Podnadpis s popiskama">Výjimečný. Jedinečný. Dechberoucí.</h2>
-    <div class="box" on:click={() => goTo('/kurzy')} aria-label="Kurzy">
-        <p>Pořádáme kurzy pro děti od 3 do 15 let a workshopy pro malé i velké.</p>
-        <a class='link' href="kurzy">Přihlaste se do kurzu</a>
-    </div>
-    <div class="box" on:click={() => goTo('/nabizime')} aria-label="Nabídka">
-        <p>Nabízíme netradiční vystoupení na plesech, firemních akcích i festivalech</p>
-        <a class='link' href="vystoupeni" aria-label="Odkaz na nabídku">Objednejte si nás</a>
+    <div class="boxes">
+        <div class="box clickable" on:click={() => goTo('/kurzy')} aria-label="Kurzy">
+            <p>Pořádáme kurzy pro děti od 3 do 15 let a workshopy pro malé i velké.</p>
+            <a class='link' href="kurzy">Přihlaste se do kurzu</a>
+        </div>
+        <div class="box clickable" on:click={() => goTo('/nabizime')} aria-label="Nabídka">
+            <p>Nabízíme netradiční vystoupení na plesech, firemních akcích i festivalech</p>
+            <a class='link' href="vystoupeni" aria-label="Odkaz na nabídku">Objednejte si nás</a>
+        </div>
     </div>
 </section>
 
 <section class="landing" aria-label="Náš příběh">
     <h1 aria-label="Nadpis příběhu">Můj příběh</h1>
     <h2 aria-label="Úvod příběhu">Toto je můj příběh o tom, jak se koníček stal prací.</h2>
-    <div class="box">
+    <div class="box not center">
         <p class="storyP" aria-label="První odstavec příběhu">
             Když jsem byla malá, začala jsem dělat atletiku. Po ukončení střední školy jsem nastoupila na studium
             v Praze, kde jsem studovala chemii životního prostředí a zároveň jsem se věnovala atletice. Dostala jsem
@@ -119,28 +157,30 @@ h2 {
 
 <section class="landing" aria-label="Lektoři">
     <h1 aria-label="Nadpis sekce">Naši lektoři</h1>
-    <div class="box">
-        <p class="name" aria-label="Jméno lektorky">Katka Vaněčková</p>
-        <figure class='figure' >
-            <img class='photo' src="lektor1.png" alt="Lektorka Katka Vaněčková">
-        </figure>
-    </div>
-    <div class="box">
-        <p class="name" aria-label="Jméno lektorky">Katka Vaněčková</p>
-        <figure class='figure' >
-            <img class='photo' src="lektor2.png" alt="Lektorka Katka Vaněčková">
-        </figure>
-    </div>
-    <div class="box">
-        <p class="name" aria-label="Jméno lektorky">Katka Vaněčková</p>
-        <figure class='figure' >
-            <img class='photo' src="lektor3.png" alt="Lektorka Katka Vaněčková">
-        </figure>
-    </div>
-    <div class="box">
-        <p class="name" aria-label="Jméno lektorky">Katka Vaněčková</p>
-        <figure class='figure' >
-            <img class='photo' src="lektor4.png" alt="Lektorka Katka Vaněčková">
-        </figure>
+    <div class="boxes">
+        <div class="box image">
+            <p class="name" aria-label="Jméno lektorky">Katka Vaněčková</p>
+            <figure class='figure' >
+                <img class='photo' src="lektor1.png" alt="Lektorka Katka Vaněčková">
+            </figure>
+        </div>
+        <div class="box image">
+            <p class="name" aria-label="Jméno lektorky">Katka Vaněčková</p>
+            <figure class='figure' >
+                <img class='photo' src="lektor2.png" alt="Lektorka Katka Vaněčková">
+            </figure>
+        </div>
+        <div class="box image">
+            <p class="name" aria-label="Jméno lektorky">Katka Vaněčková</p>
+            <figure class='figure' >
+                <img class='photo' src="lektor3.png" alt="Lektorka Katka Vaněčková">
+            </figure>
+        </div>
+        <div class="box image">
+            <p class="name" aria-label="Jméno lektorky">Katka Vaněčková</p>
+            <figure class='figure' >
+                <img class='photo' src="lektor4.png" alt="Lektorka Katka Vaněčková">
+            </figure>
+        </div>
     </div>
 </section>
