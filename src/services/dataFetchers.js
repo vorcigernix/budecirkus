@@ -1,9 +1,9 @@
-import {baseURL, proxyURL} from "../consts/endpoints";
+import {baseURL} from "../consts/endpoints";
 import fetch from 'node-fetch';
 import {isInDateRange} from "../helpers/date";
 
 export const getCoursesTypes = async () => {
-    const response = await fetch(proxyURL + baseURL + '/Api/CourseTypes/GetLookup', {
+    const response = await fetch(baseURL + '/Api/CourseTypes/GetLookup', {
         mode: 'cors',
         headers: {
             'Accept': 'application/json',
@@ -15,7 +15,7 @@ export const getCoursesTypes = async () => {
 }
 
 export const getSemesters = async () => {
-    const response = await fetch(proxyURL + baseURL + '/Api/Semesters/Get', {
+    const response = await fetch(baseURL + '/Api/Semesters/Get', {
         mode: 'cors',
         headers: {
             'Accept': 'application/json',
@@ -27,7 +27,7 @@ export const getSemesters = async () => {
 }
 
 export const getCourses = async (id) => {
-    const response = await fetch(proxyURL + baseURL + '/Api/Courses/Get?' + encodeURIComponent('semesterID=' + id), {
+    const response = await fetch(baseURL + '/Api/Courses/Get?' + encodeURIComponent('semesterID=' + id), {
         mode: 'cors',
         headers: {
             'Accept': 'application/json',
